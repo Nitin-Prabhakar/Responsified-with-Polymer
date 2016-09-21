@@ -1,0 +1,29 @@
+{
+  "name": "Responsified-with-Polymer",
+  "homepage": "https://github.com/Nitin-Prabhakar/Responsified-with-Polymer",
+  "authors": [
+    "Nitin <pmitwithnitin@gmail.com>"
+  ],
+  "description": "Illustrate dom-binding and dom-looping with Polymer, while responsifying images",
+  "main": "index.html",
+  "keywords": [
+    "Polymer",
+    "Responsive",
+    "gulp-responsive",
+    "gulp-cache",
+    "gulp-cached",
+    "gulp-remember",
+    "gulp-imagemin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "polymer": "Polymer/polymer#^1.6.1"
+  }
+}
