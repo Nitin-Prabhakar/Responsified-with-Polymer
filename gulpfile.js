@@ -257,7 +257,7 @@ $.task('watchdog', function() {
   */
   sync.init({
     proxy: {
-      target: 'www.myblog.com/Responsified-with-Polymer'
+      target: 'www.myblog.com/Responsive-image-component/'
     },
     port: 8000
   });

@@ -8,10 +8,43 @@
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="elements/my-img.html">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+      .center img{
+        display: block;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      section{
+        margin-bottom: 2.2vw;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <my-img base="build/images/" alt="project-health-tracker" src-conf='[ { "srcset":[480,640,800,960,1280,1600],"sizes":"(max-width:767px)100vw,(max-width:970px)50vw,33.3333vw","file":"calorie"} ]' fallback-src="calorie-480"></my-img>
+    <main class="container">
+      <section id="default" class="text-center">
+        <h3>Default Display - 100vw if mobile, 50vw if tablet, 33vw else</h3>
+      <div class="row">
+        <div class="col-xs-12 center">
+            <my-img base="build/images/" alt="project-health-tracker" src-conf='[ { "srcset":[480,640,800,960,1280,1600],"sizes":"(max-width:767px)100vw,(max-width:970px)50vw,33.3333vw","file":"calorie"} ]' fallback-src="calorie-480"></my-img>
+        </div>
+        </div>
+      </section>
+      <section id="art-direction" class="text-center">
+        <h3>Art Direction - Different images of cats on different screens at a 100vw</h3>
+        <div class="row">
+          <div class="col-xs-12">
+            <my-img base="build/images/" alt="project-cat" src-conf='[
+{"media":"(min-width:599px) and (max-width:900px)","srcset":[480,640,800,960,1280],"file":"05DMCHNN56"},
+{"media":"(min-width:359px) and (max-width:598px)","srcset":[480,640,800,960,1280],"file":"47QAHXH1D8"},
+{"srcset":[480,640,800,960,1280],"file":"DLIRRCCYBR"}
+
+
+             ]' fallback-src="calorie-480"></my-img>
+          </div>
+        </div>
+      </section>
+      </main>
   </body>
 </html>
